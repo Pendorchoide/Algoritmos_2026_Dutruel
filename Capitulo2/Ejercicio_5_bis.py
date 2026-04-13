@@ -20,7 +20,7 @@ def roman_char_to_int(letter: str)->int:
                 print("Se ingreso un caracter no valido")
                 return -1
 
-def roman_to_dec(roman:str, i:int = 0)->int:
+def roman_to_dec(roman:str, i:int = 0, repeat_counter: int = 0)->int:
     """Convierte un número romano a decimal.
     Args:
         roman (str): El número romano a convertir.
@@ -43,9 +43,14 @@ def roman_to_dec(roman:str, i:int = 0)->int:
         if next_num > current_num:
             return (next_num - current_num) + roman_to_dec(roman, i + 2)
         else:
-            return current_num + roman_to_dec(roman, i + 1)
-    else:
-        return current_num
+            if next_num == current_num:
+                repeat_counter_aux = repeat_counter
+                repeat_counter_aux +=1
+            if repeat_counter_aux == 3:
+                print("El número ingresado no es valido")
+                return -1
+
+            return current_num + roman_to_dec(roman, i + 1, repeat_counter_aux)
 
 
     

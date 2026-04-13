@@ -44,6 +44,8 @@ def roman_to_dec(roman:str, i:int = 0)->int:
             return (next_num - current_num) + roman_to_dec(roman, i + 2)
         else:
             return current_num + roman_to_dec(roman, i + 1)
+    else:
+        return current_num
 
 
     
