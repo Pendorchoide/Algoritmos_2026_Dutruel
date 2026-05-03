@@ -30,7 +30,7 @@ def usar_la_fuerza(back_pack:list,object_counter:int = 0):
             print("¡Se ha encontrado un sable de luz!, se sacaron ",object_counter," objetos antes de conseguirlo")
         else:
             object_counter += 1
-            usar_la_fuerza(back_pack,object_counter)
+            usar_la_fuerza(back_pack, object_counter)
 
 
 print("Mochila 1:")

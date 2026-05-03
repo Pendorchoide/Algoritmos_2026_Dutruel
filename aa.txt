@@ -1,0 +1,216 @@
+que partes puntuales del proceso deben hacerlo? (falta especificidad). Que formato debe tener la pista transaccional? que información debe contener? solo se registras pistas transaccionales o también de auditoría? donde se registran?
+·
+estado en que estado se encuentren
+
+estado se refiere a "activo" e "inactivo", o a alguna otra clasificación?
+·
+visualizar todos los pedidos de soporte
+
+en que forma los visualiza/ se le presentan?
+·
+opcionalmente
+
+que podria motivar al auditor a visualizar pedidos entonces?
+·
+algunos casos
+
+en que casos
+·
+auditor
+
+quien es el audior? es un actor que ya se presento previamente en el requerimiento o es alguien nuevo?
+·
+redireccionar un pedido dado a cualquier nivel de soporte
+
+si el supervisor es el encargado de esto, se le debe limitar esta funcionalidad a los 3 niveles de soporte que vimos antes? esto es contradictorio con lo ya establecido previamente.
+·
+por ejemplo ante un reclamo de un cliente
+
+como afecta el reclamo del cliente al accionar del supervisor? el reclamo es en la forma de un nuevo pedido? si no es asi como le llega al superviso y en que formato
+·
+puede cambiar el estado de un pedido de “inactivo” a “activo”
+
+no tiene limites para esta acción? debe seguir algun criterio o condición? puede "activar" pedidos ya resueltos?
+·
+nteractuar con los pedidos en cualquier instancia
+
+que tipo de interacciones puede tener? a que se le considera "instancia"? se refiere a activo o inactivo?
+·
+supervisor
+
+quien es el superviso? un nuevo actor o el ultimo nivel de soporte a quien le fue asignado el pedido?
+·
+no modificarlos
+
+no se puede modificar pq son "propiedad" de alguién mas? que sucede los dos pedidos con los que se trabaja (el "abierto" y el de referencia) son "propiedad" del mismo actor (niveles de soporte)?
+·
+ver como referencia pedidos en otras instancias
+
+que son estas otras instancias? los pedidos de referencia se pueden ver en paralelo con los que se estan trabajando? como se presenta en general la información? hay alguna regla que relacione pedidos entre sí para que sirvan de referencia (mismo tipo por ej)? Solo se pueden usar pedidos cerrados como referencia o cualquier tipo sirve?
+Mostrar más
+·
+para verlos en forma individual o masiva
+
+que implica verlos en forma "individual" y "masiva"? por que es una función planteada como aparte de la anteriormente mencionada "visualizar"
+·
+función
+
+en que forma se presentaria esta funcion? como se puede interacturar con ella?
+·
+se le provea
+
+a quien, al cliente, a algún nivel en particular, a todos lo niveles?
+·
+Quizás puede ser conveniente
+
+demasiado potencial e indeciso
+·
+es retornado al 2do nivel de soporte
+
+se termina ahi? el 2do nivel lo debe pasar directamente al cliente? debe pasarselo antes al 1er nivel?
+·
+el caso al finalizarse
+
+como se determina que un caso fue efectivamente finalizado. Esto debe ser registrado de alguna forma? (falta de requerimientos no funcionales y reglas de empresa poco claras)
+·
+para los que le son asignados
+
+no queda claro con esta redacción que es asignado, los pedidos o el 2do nivel.
+·
+3er nivel de soporte quien tendrá funciones similares a las de 2do nivel de soporte
+
+que implica ser del 3er nivel de soporte? tienen un conocimiento mayor en algún campo con respecto a los de 1er y 2do nivel? Son el ultimo nivel de esta cadena de escalamientos?
+·
+El 2do nivel de soporte puede redireccionar el pedido
+
+bajo que condiciones el 2do nivel puede decidir si redireccionar el pedido?
+·
+retornarlos al 1er nivel de soporte
+
+son retornados al mismo actor de primer nivel que los elevo o a alguien nuevo? por que medio se los retorna?
+·
+puede actualizarlos
+
+una vez mas, que implica actualizar? que información nueva adosa si es que lo hace?
+·
+o desea todos o algunos de los pedidos que le han sido asignados
+
+Bajo que criterio elige que pedidos tomar y que pedidos no? hay un número máximo de pedidos que pueda tomar a la vez? (reglas de la empresa)
+·
+puede ver
+
+como los ve, en que forma se le presentan los pedidos? los encuentra en una DB donde cualquier actor de 2nivel puede tomarlos o se le asignaron personalmente?
+·
+2do nivel de soporte
+
+que es considerado un "2do nivel de soporte"? una persona con mas experiencia que el primer nivel? distinta experiencia? es una persona o un agente de IA por ejemplo?
+·
+condiciones a ser definidas
+
+información incompleta, hay que definir las condiciones
+·
+actuaciones que hubiera realizado
+
+las  "actuaciones" se visualizan como una solución definitiva? son solo consejos? que formato tienen?
+·
+actualizar la información
+
+en que forma actualiza la información? notas adjuntas?
+·
+hubiera
+
+potencial
+·
+cada pedido
+
+puede actualizar solo pedidos activos? o tambien pedidos ya cerrados?
+·
+alguna
+
+palabra poco definida
+·
+aclaración intermedia
+
+no se define bien que es una aclaración intermedia. Implica que el cliente agregue detalles a su pedido? implica una solución momentanea/parcial por parte del analista?
+·
+retornársela
+
+de que forma lo retorna? debe adjuntar algun mensaje para retornarlo? se hace a través del mismo portal por donde el cliente sube el pedido?
+·
+otra instancia de soporte
+
+esta etapa de soporte debe ser de una especialidad mayor (segundo nivel)? puede pasárselo a un analista de primer nivel distinto? puede pasarselo a mas de una persona? (reglas de negocio)
+·
+también podría redireccionar el pedido
+
+De que forma se redirecciona? lo manda por mail? lo sube a una DB propia de la empresa? Esta DB es distintia de donde lo saco originalmente? La redirección del pedido solo implica notificar a la persona a la que se transfiere?
+·
+ponerlos en espera o cerrarlos (inactivos)
+
+Internamente es lo mismo "poner en espera" y "cerrarlos"? (ya que los dos se clasifican como inactivos). Una vez cerrados o puestos en espera, los pedidos tienen la opción de "reactivarse"?
+·
+sistema transaccional
+
+El sistema se debe construir desde 0? hay alguna base o tecnologia desde la que se tenga que partir? (faltan requerimientos no funcionales)
+·
+soporte tecnológico
+
+que tipo de soporte se desea dar? se desea dar soluciones solo a problemas de carácter tecnológico o de todo tipo?
+·
+actualizar los mismos
+
+que implica "actualizar"? Es adjuntarle una solución al pedido? es actualizar otro tipo de dato?
+·
+tal vez
+
+uso de potencial
+·
+visualizar algunos pedidos de soporte en curso (activos)
+
+De nuevo, como los visualiza? tiene una interfaz grafica? si la tiene, es distinta a la del usuario? se le presenta la misma o mas información sobre "pedidos" que al usuario?
+·
+podría
+
+uso de potencial
+·
+El analista de soporte de primer nivel
+
+Que se considera un "analista de soporte de primer nivel" en el contexto? que aptitudes y responsabilidades tiene?
+·
+borrar algún pedido activo que no desearía seguir reclamando
+
+hay alguna condicion que deba cumplir el pedido (a demas de tener que estar activo) para que el cliente lo pueda borrar? Solo puede borrar pedidos activos? puede borrar pedidos de su historial de pedidos? si un pedido activo es borrado desaparece de se historial de pedidos?
+Mostrar más
+·
+o tal vez
+
+mal uso de un termino potencial
+·
+visualizar todos los pedidos que hubiera hecho previamente
+
+como son presentados estos pedidos? es en forma de lista? si es asi como estan ordenados?. Aparecen todos los pedidos hechos historicamente? incluye pedidos resueltos? incluye pedidos en curso?, incluye pedidos cerrados o en espera?
+Mostrar más
+·
+podría
+
+mal uso del potencial
+·
+ingresaría un pedido de soporte en un portal
+
+de que forma lo ingresaría? tiene que rellenar con algún tipo de información el "pedido"?
+·
+en un portal
+
+se refiere a un sitio web? o algún otro tipo de portal
+·
+un pedido de soporte
+
+que forma/formato tiene ese "pedido de soporte"? Es un ticket?
+·
+ingresaría
+
+uso indebido de potencial
+·
+gestión
+
+Que implica la gestión?
