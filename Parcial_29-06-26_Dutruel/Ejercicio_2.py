@@ -135,7 +135,10 @@ superheroes_list.add_criterion("real_name", by_real_name)
 def list_order_by_real_name(supers: List):
     supers.sort_by_criterion("real_name")
     for heroe in supers:
-        print(heroe.get_real_name())
+        real_name = heroe.get_real_name()
+        if(real_name):
+            print(real_name)
+
 
 print("Ejercico f")
 list_order_by_real_name(superheroes_list)
@@ -196,6 +199,8 @@ def eliminate_characters(characters: List, name: str):
         print(f"No se encontro a {name} en la lista")
 
 print("Ejercico j")
+print("")
 eliminate_characters(superheroes_list, "Electro")
+print("")
 eliminate_characters(superheroes_list, "Baron Zemo")
 
