@@ -10,19 +10,10 @@ class Node():
         self.other_values = other_values
         self.height = 0
 
-    def get_value(self):
-        return self.value
-    
-    def get_right(self):
-            return self.right
-
-    def get_left(self):
-            return self.left
-    
     def __str__(self):
-        return str(self.value)
+        return self.value
 
-class BinaryTree():
+class U_BinaryTree():
 
     def __init__(self):
             self.root = None
@@ -43,8 +34,8 @@ class BinaryTree():
             else:
                 root.right = __insert_node(root.right, value, other_value)
             
-            root = self.auto_balance(root)
-            self.update_height(root)
+            
+            
             return root
 
         self.root = __insert_node(self.root, value, other_value)
@@ -54,11 +45,14 @@ class BinaryTree():
 
     def delete_node(self, value: Any) -> Optional[Any]:
         def __replace(root):
+            # print(root.value)
+            aux = None
             if root.right is None:
+                # print('mayor encontrado')
                 return root.left, root
-            root.right, aux = __replace(root.right)
-            root = self.auto_balance(root)
-            self.update_height(root)
+            else:
+                # print('segui buscando a la derecha')
+                root.right, aux = __replace(root.right)
             return root, aux
 
         def __delete_node(root, value):
@@ -80,10 +74,9 @@ class BinaryTree():
                     else:
                         root.left, aux = __replace(root.left)
                         root.value = aux.value
-                        root.other_values = aux.other_values
 
-            root = self.auto_balance(root)
-            self.update_height(root)
+            
+            
             return root, x, other_value
 
         other_value = None
@@ -169,7 +162,9 @@ class BinaryTree():
 
     def update_height(self, root):
         if root is not None:
-            root.height = 1 + max(self.height(root.left), self.height(root.right))
+            left_height = self.height(root.left)
+            right_height = self.height(root.right)
+            root.height = (left_height if left_height > right_height else right_height)
 
     def simple_rotation(self, root, control):
         if control: # rotaicon hacia la derecha
@@ -181,7 +176,7 @@ class BinaryTree():
             root.right = aux.left
             aux.left = root
         
-        self.update_height(root)
+        
         self.update_height(aux)
         root = aux
         return root

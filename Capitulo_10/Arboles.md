@@ -1,0 +1,1 @@
+Se pueden transformar arboles n-arios en arboles binarios toman a los hermanos ubicados a la derecha, y a los hijos ubicados a la izquierda. Esto se hace mediante la transformada Knuth
