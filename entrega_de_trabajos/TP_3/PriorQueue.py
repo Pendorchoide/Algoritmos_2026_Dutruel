@@ -1,8 +1,9 @@
 from typing import Any
 
-class Heap():
+class PriorQueue():
     def __init__(self):
         self.elements = []
+        self._arrival_order = 0   # Para un funcionamiento FIFO si se empata en prioridad
 
     def add_element(self, value: Any) -> None:
         self.elements.append(value)
@@ -13,6 +14,7 @@ class Heap():
         self.elements[0], self.elements[-1] = self.elements[-1], self.elements[0]
         value = self.elements.pop()
         self.sink_element(0)
+        return value
 
     def size(self) -> int:
         return len(self.elements)
@@ -47,50 +49,20 @@ class Heap():
     def heap_sort(self)->None:
         result = []
         while self.size() > 0:
-            value = self.delete_top_element
+            value = self.delete_top_element()
             result.append(value)
         return result
 
     #Cola de Prioridad
 
-    def arrive(self, )
+    def arrive(self, value, priority) -> None:
+        self.add_element((priority, -self._arrival_order, value))
+        self._arrival_order += 1
 
-    
+    def attention(self) -> Any:
+        result = None
+        if self.size() > 0:
+            priority, _, value = self.delete_top_element()
+            result = [priority, value]
 
-monticulo = Heap()
-
-monticulo.add_element(15)
-print(monticulo.elements)
-
-monticulo.add_element(5)
-print(monticulo.elements)
-
-monticulo.add_element(52)
-print(monticulo.elements)
-
-monticulo.add_element(26)
-print(monticulo.elements)
-
-monticulo.add_element(26)
-print(monticulo.elements)
-
-monticulo.add_element(99)
-print(monticulo.elements)
-
-monticulo.add_element(38)
-print(monticulo.elements)
-
-monticulo.add_element(9)
-print(monticulo.elements)
-
-monticulo.add_element(87)
-print(monticulo.elements)
-
-
-
-print(monticulo.elements)
-
-
-monticulo.delete_top_element()
-print("===========")
-print(monticulo.elements)
+        return result
