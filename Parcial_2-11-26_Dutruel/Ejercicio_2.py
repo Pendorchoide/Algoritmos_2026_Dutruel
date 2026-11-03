@@ -8,7 +8,6 @@
 
 from graph import Graph
 from star_wars_data import characters, connections
-from stack import Stack
 from typing import Any
 
 grafo_personajes = Graph(is_dir=False)
@@ -61,7 +60,7 @@ for pair in pairs:
     print(f"  - {pair[0]} y {pair[1]}")
 
 # E) Calcular el camino más corto desde: C-3PO a R2-D2 y desde Yoda a Darth Vader 
-# Como nota el camino más corto es considerado como el de menor peso.
+# Como nota el camino más corto es considerado como el de menor costo.
 def find_shortest_path_from_x_to_y(origin: Any, destination: Any):
     paths = grafo_personajes.dijkstra(origin)
     target = destination
