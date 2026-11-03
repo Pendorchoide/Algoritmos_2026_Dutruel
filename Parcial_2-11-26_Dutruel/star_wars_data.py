@@ -3,14 +3,14 @@ characters = [
     {"name": "Darth Vader", "episodes": [3, 4, 5, 6]},
     {"name": "Yoda", "episodes": [1, 2, 3, 5, 6, 8]},
     {"name": "Boba Fett", "episodes": [2, 5, 6]},
-    {"name": "C-3PO", "episodes": [1, 2, 3, 4, 5, 6, 7, 8, 9]},
+    {"name": "C3PO", "episodes": [1, 2, 3, 4, 5, 6, 7, 8, 9]},
     {"name": "Leia", "episodes": [3, 4, 5, 6, 7, 8, 9]},
     {"name": "Rey", "episodes": [7, 8, 9]},
     {"name": "Kylo Ren", "episodes": [7, 8, 9]},
     {"name": "Chewbacca", "episodes": [3, 4, 5, 6, 7, 8, 9]},
     {"name": "Han Solo", "episodes": [4, 5, 6, 7, 9]},
-    {"name": "R2-D2", "episodes": [1, 2, 3, 4, 5, 6, 7, 8, 9]},
-    {"name": "BB-8", "episodes": [7, 8, 9]},
+    {"name": "R2D2", "episodes": [1, 2, 3, 4, 5, 6, 7, 8, 9]},
+    {"name": "BB8", "episodes": [7, 8, 9]},
 ]
 
 connections = []

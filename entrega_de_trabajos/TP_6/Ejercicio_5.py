@@ -107,7 +107,7 @@ red_de_equipos.amplitude_show(origin)
 
 # C)
 
-def find_path_dijkstra(paths: Stack, origin: Any, destination: Any):
+def find_path_dijkstra(paths: Stack, destination: Any):
     target = destination
     path = []
 
@@ -130,7 +130,7 @@ print(f"Camino mas corto desde {origen} a {destino}")
 todos_los_caminos = red_de_equipos.dijkstra(origen)
 # todos_los_caminos.show()
 
-camino_deseado = find_path_dijkstra(todos_los_caminos, origen, destino)
+camino_deseado = find_path_dijkstra(todos_los_caminos, destino)
 print(camino_deseado)
 print()
 
@@ -142,7 +142,7 @@ print(f"Camino mas corto desde {origen} a {destino}")
 todos_los_caminos = red_de_equipos.dijkstra(origen)
 # todos_los_caminos.show()
 
-camino_deseado = find_path_dijkstra(todos_los_caminos, origen, destino)
+camino_deseado = find_path_dijkstra(todos_los_caminos, destino)
 print(camino_deseado)
 print()
 
@@ -153,7 +153,7 @@ print(f"Camino mas corto desde {origen} a {destino}")
 todos_los_caminos = red_de_equipos.dijkstra(origen)
 # todos_los_caminos.show()
 
-camino_deseado = find_path_dijkstra(todos_los_caminos, origen, destino)
+camino_deseado = find_path_dijkstra(todos_los_caminos, destino)
 print(camino_deseado)
 print()
 

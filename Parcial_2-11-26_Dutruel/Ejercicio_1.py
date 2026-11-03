@@ -124,9 +124,9 @@ show_pokemon_by_number(arbol_numero, 3)
 print("\nMostrar Pokémon con número 25:")
 show_pokemon_by_number(arbol_numero, 25) 
 print("\nMostrar Pokémon cuyo nombre contiene 'bul':")
-show_pokemon_by_name(arbol_nombre, "um")  
+show_pokemon_by_name(arbol_nombre, "bul")
 print("\nMostrar Pokémon cuyo nombre contiene 'um':")
-show_pokemon_by_name(arbol_nombre, "um") 
+show_pokemon_by_name(arbol_nombre, "um")
 
 # C) Mostrar todos los nombres de los Pokémons de un determinado tipo: fantasma, fuego, acero y eléctrico
 
